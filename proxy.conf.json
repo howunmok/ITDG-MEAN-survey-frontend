@@ -1,6 +1,5 @@
 {
-    "/api/*": 
-    {
-        "target": "http://localhost:3201/api"
-    }
+  "/api/*": {
+    "target": "https://itdg-ng-questionnaire-backend.onrender.com/api"
+  }
 }
