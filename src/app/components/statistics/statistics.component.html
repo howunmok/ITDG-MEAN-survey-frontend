@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Topic</th>
+        <th scope="col">Number of Respondents </th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let survey of surveys">
+        <th scope="row">{{survey.surveyId}}</th>
+        <td>{{survey.topic}}</td>
+        <td>{{survey.counter}}</td>
+        <td><a class="btn btn-info" routerLink="/resultsurvey/{{survey.surveyId}}">Result</a>
+        </td>
+      </tr>
+  </table>

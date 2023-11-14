@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <form [formGroup]="surveyForm">
+      <div class="form-group">
+        <label for="topic">Topic</label>
+        <input
+          type="text"
+          id="topic"
+          formControlName="topic"
+          class="form-control"
+          placeholder="Your Survey Topic"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input
+          type="text"
+          id="description"
+          formControlName="description"
+          class="form-control"
+          placeholder="Description of your survey"
+        />
+      </div>
+
+      <div class="createQuestions">
+        <div formArrayName="questions">
+          <div
+            class="form-group"
+            *ngFor="let questionControl of getControl(); let i = index"
+          >
+            <h6>Question{{ i + 1 }}</h6>
+            <input type="text" class="form-control" [formControlName]="i" />
+          </div>
+          <button class="btn btn-warning" (click)="addQuestion()">
+            Add a new question
+          </button>
+        </div>
+      </div>
+      <div class="btns">
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()">
+          FINISH
+        </button>
+        <button class="btn btn-danger" (click)="onCancel()">Reset</button>
+      </div>
+    </form>
+  </div>
+</div>

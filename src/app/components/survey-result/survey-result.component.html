@@ -1,0 +1,9 @@
+<h2>{{survey.topic}}</h2>
+<h6>{{survey.description}}</h6>
+
+<div class="list-group" *ngFor="let question of survey.questions; let i = index">
+    <li class="list-group-item active">Q{{i+1}} {{question}}</li>
+    <li class="list-group-item" *ngFor="let answer of answers"> {{answer.answers[i]}}</li>
+</div>
+
+<button class="btn btn-info" (click)="printResult()">Print</button>

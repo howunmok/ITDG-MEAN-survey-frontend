@@ -1,0 +1,21 @@
+<div class="mt-5">
+    <div class="row justify-content-md-center">
+      <div class= "col col-lg-4">
+          <h2><span style="color:rgb(164, 160, 147)">Create Your Own</span> </h2>
+          <span style="font-size:50px; color:rgb(243, 177, 36)">ONLINE SURVEY</span>
+      </div>
+      <div class= "col col-lg-3">
+      <div class="hero-button">
+          <a *ngIf="!logged" routerLink="/signup" class="btn btn-warning px-5">
+              <span style="font-size:40px; color:gray">Get Started</span>
+          </a>
+          <a *ngIf="logged" routerLink="/activesurvey" class="btn btn-warning px-5">
+            <span style="font-size:40px; color:gray">Get Started</span>
+        </a>
+      </div>
+  </div>
+  </div>
+  
+  <div class="text-center">
+      <img src="../../../assets/image/Home.png" alt="Home">
+      </div>

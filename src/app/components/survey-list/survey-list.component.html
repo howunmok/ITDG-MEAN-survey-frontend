@@ -1,0 +1,6 @@
+<app-survey-item
+  *ngFor="let survey of surveys"
+  [survey] = "survey"
+  (onDeleteSurvey)="deleteSurvey(survey)"
+  >
+</app-survey-item>
